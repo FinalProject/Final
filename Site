@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+typedef struct snake
+{
+	int x;
+	int y;
+}Snake;
+
+Snake sBody[1000];
+
+void setSite(int i, int site_x, int site_y)
+{
+	sBody[i].x = site_x;
+	sBody[i].y = site_y;
+}
+
+
+
+void setStartSite()
+{
+	int i;
+	sBody[0].x = sBody[1].x = sBody[2].x = sBody[3].x = sBody[4].x = 1;
+	for (i = 0; i < 5; i++) sBody[i].y = abs(5 - i);
+
+}
